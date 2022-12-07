@@ -46,7 +46,7 @@
   "Prev": "Precedente",
   "Next": "Avanti",
   "Page": "Pagina",
-  "Page {current_page} of {total_pages}": "Pagina {pagina_corrente} di {pagine_totali}",
+  "Page {current_page} of {total_pages}": "Pagina {current_page} di {total_pages}",
   "Email": "Email",
   "Your name": "Il tuo nome",
   "Your email address": "Il tuo indirizzo e-mail",

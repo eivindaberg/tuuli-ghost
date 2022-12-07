@@ -30,20 +30,7 @@ collections:
   /:
     permalink: /{slug}/
     template: index
-    filter: tag:-[nyhetsbrev,kurs,budsjettmal]
-  /nyhetsbrev/:
-    permalink: /nyhetsbrev/{slug}/
-    template: index_basic
-    filter: tag:nyhetsbrev
-  /ifn/:
-    permalink: /ifn/{slug}/
-    template: index_basic
-    filter: tag:kurs
-  /budsjett/:
-    permalink: /budsjett/{slug}/
-    template: index_basic
-    filter: tag:budsjettmal
-
+  
 taxonomies:
   tag: /tag/{slug}/
   author: /author/{slug}/

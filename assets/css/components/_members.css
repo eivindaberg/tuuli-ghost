@@ -303,6 +303,8 @@
   }
 }
 
+[data-paid-membership="false"] .is-membership-upgrade { display: none; }
+
 /* Don't show free tier for free members */
 /* .membership[data-member-status="free"] .tier-free { display: none; } */
 

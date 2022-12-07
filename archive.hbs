@@ -6,7 +6,7 @@
     image_style="default"
   }}
   <div class="post-hero__excerpt text-acc text-center text-11">
-    {{#get "posts" filter="tag:-nyhetsbrev" limit="1"}}
+    {{#get "posts" limit="1"}}
       {{t "Browse the complete archive of {total} posts." total=pagination.total}}
     {{/get}}
   </div>

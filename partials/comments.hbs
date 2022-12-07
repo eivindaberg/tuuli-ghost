@@ -3,17 +3,17 @@
   {{#match @custom.comment_plugin "!=" "None"}}
     <div class="post-comments content-width m-b-lg">
       <div class="section-title sm">{{t "Comments"}}</div>
-      <div class="comments bg-default radius flex flex-col p-lg" id="comments">
+      <div class="comments bg-default radius flex flex-col p-lg {{@custom.comment_plugin}}" id="comments">
         {{!-- Check comment plugin settings in Admin UI --}}
         {{#if @custom.comment_plugin}}
-          {{!-- Native comments 
+          {{!-- Native comments --}}
           {{#match @custom.comment_plugin "Native"}}
             {{comments 
               title=""
               count=false
               mode=auto
             }}
-          {{/match}}--}}
+          {{/match}}
 
           {{!-- Cove comments --}}
           {{#match @custom.comment_plugin "Cove"}}

@@ -11,7 +11,7 @@
   </div>
 {{/page}}
 
-<div class="container wrapper">
+<div class="container wrapper" data-paid-membership="{{#get "tiers" filter="type:paid+visibility:public" limit="1" as |tiers|}}{{#if tiers}}true{{else}}false{{/if}}{{/get}}">
   {{#if @member.paid}}
     {{!-- Logged in, paying member: Show account info --}}
     <div class="member content-width text-acc m-b-lg">
@@ -38,7 +38,7 @@
     </div>
     
     {{!-- Members tiers --}}
-    <h3 class="text-center m-t-lg m-b">{{t "Choose a plan"}}</h3>
+    <h3 class="text-center m-t-lg m-b is-membership-upgrade">{{t "Choose a plan"}}</h3>
     {{> member-tiers type="paid"}}
 
   {{else}}

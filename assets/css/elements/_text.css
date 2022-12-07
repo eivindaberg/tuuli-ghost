@@ -21,7 +21,7 @@ blockquote {
   margin-bottom: var(--gap-lg);
   font-family: var(--font-body);
   font-style: italic;
-  font-size: calc(1.1 * var(--font-size-base));
+  /* font-size: calc(1.1 * var(--font-size-base)); */
   line-height: var(--line-height-base);
   background-color: var(--color-bg);
   border-left: 3px solid var(--color-brand);

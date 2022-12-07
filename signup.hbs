@@ -26,7 +26,7 @@
       <div class="signup-page__box">
         {{#unless @site.members_invite_only}}
           <h1 class="signup-page__title">{{#page}}{{title}}{{else}}{{t "Sign up"}}{{/page}}</h1>
-          <p id="form-input-label" class="opacity-080">{{#page}}{{excerpt}}{{else}}{{t "Bli medlem for å få tilgang." sitetitle=@site.title}}{{/page}}</p>
+          <p id="form-input-label" class="opacity-080">{{#page}}{{excerpt}}{{else}}{{t "Sign up to {sitetitle} to get access to premium content." sitetitle=@site.title}}{{/page}}</p>
           
           {{> subscribe-form 
             form_type="signup" 

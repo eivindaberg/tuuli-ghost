@@ -59,7 +59,6 @@ const handleLoadMore = () => {
 * Handle Image Gallery
 */
 const handleImageGallery = () => {
-  const images = document.querySelectorAll('.kg-image-card img, .kg-gallery-card img');
   const galleryImages = document.querySelectorAll('.kg-gallery-image img');
 
   // Gallery style
@@ -71,6 +70,13 @@ const handleImageGallery = () => {
     var ratio = width / height;
     container.style.flex = `${ratio} 1 0%`;
   })
+}
+
+/** 
+* Handle Lightbox
+*/
+const handleLightbox = () => {
+  const images = document.querySelectorAll('.kg-image-card img, .kg-gallery-card img');
 
   // Lighbox function
   images.forEach(image => {
@@ -84,7 +90,13 @@ const handleImageGallery = () => {
 
     if (link) {
       var linkButton = document.createElement('a');
-      linkButton.innerHTML = `<i class="icon icon-link icon--sm"><svg class="icon__svg"><use xlink:href="/assets/icons/icon-sprite.svg#link"></use></svg></i>`
+      linkButton.innerHTML = `<i class="icon icon-link icon--sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+          <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+        </svg>
+      </i>`
       linkButton.setAttribute('class', 'image-link');
       linkButton.setAttribute('href', link);
       linkButton.setAttribute('target', '_blank');
@@ -435,6 +447,7 @@ const callback = () => {
   handleSearch();
   handleLoadMore();
   handleImageGallery();
+  handleLightbox();
   handleMenu();
   handleUserMenu();
   handleColorScheme();

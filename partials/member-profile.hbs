@@ -24,9 +24,9 @@
         {{!-- Info for regular members --}}
         <p class="m-b">
           {{t "Currently, you are subscribed to free updates."}} 
-          {{t "Unlock full access to see the entire library of members-only content & updates by subscribing to a paid plan."}}
+          <span class="is-membership-upgrade">{{t "Unlock full access to see the entire library of members-only content & updates by subscribing to a paid plan."}}</span>
         </p>
-        {{#link href="/membership/" class="btn btn--sm m-r"}}
+        {{#link href="/membership/" class="btn btn--sm m-r is-membership-upgrade"}}
           {{>icon name="trending-up" size="sm"}}{{t "Upgrade"}}
         {{/link}}
         {{#link href="javascript:" data-members-signout="" class="btn btn--sm btn--bordered"}}

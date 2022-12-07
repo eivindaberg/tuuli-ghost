@@ -47,7 +47,7 @@
             // Which headings to grab inside of the contentSelector element.
             headingSelector: 'h1, h2, h3, h4',
             // Ignore some headings (like header card and toggle card)
-            ignoreSelector: '[class*="kg-"]',
+            ignoreSelector: '[class*="kg-"],[class*="content-cta"]',
             // For headings inside relative or absolute positioned containers within content.
             hasInnerContainers: false,
             // smooth scroll
@@ -78,6 +78,8 @@
               if (mqSmall.matches) postToc.classList.remove('is-active');
             }
           });
+
+          document.querySelector('.js-toc .toc-list') ? postToc.classList.add('is-rendered') : null;
         }
       }
     });

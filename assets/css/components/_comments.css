@@ -1,6 +1,10 @@
 .comments {
   border: 1px dashed var(--color-border);
   
+  &.Native {
+    padding-bottom: 0;
+  }
+
   .subscribe-form {
     max-width: 26rem;
     width: 100%;

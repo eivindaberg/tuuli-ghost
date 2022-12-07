@@ -39,6 +39,7 @@
 [data-layout] {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 [data-layout="hero-with-image-below"] .hero {

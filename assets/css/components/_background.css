@@ -8,7 +8,7 @@
   filter: blur(100px) blur(100px);
   border-radius: 50%;
   opacity: 0.2;
-  top: max(10vw, 10rem);
+  top: 0;
   right: 0;
 }
 

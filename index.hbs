@@ -3,7 +3,7 @@
 {{!-- Everything in a container --}}
 <div class="container wrapper">
   
-  <div class="home-layout" data-layout="{{@custom.home_page_layout}}">
+  <div class="home-layout" data-layout="{{@custom.home_page_layout}}" {{#is "home"}}data-bg-accent="{{@custom.background_accent}}"{{/is}}>
     {{!-- Hero section --}}
     {{#is "home"}}
       {{> hero}}
