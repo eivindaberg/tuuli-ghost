@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{!-- page header --}}
+{{#page}} 
+  {{> post-hero 
+    image_style="hidden"
+  }}
+{{else}}
+  <div class="post-hero is-page flex flex-col flex-cc m-b-xl">
+    <h1 class="post-hero__title text-center">{{t "Membership"}}</h1>
+  </div>
+{{/page}}
+
+<div class="container wrapper">
+  {{#if @member.paid}}
+    {{!-- Redirect --}}
+    {{#if @custom.use_portal_links}}
+      <script>window.location = '{{@site.url}}/membership/#/portal/account/';</script>
+    {{else}}
+      <script>window.location = '{{@site.url}}/account/';</script>
+    {{/if}}
+  {{else if @member}}
+    {{!-- For free member show paid plans only --}}
+    {{> member-tiers type="paid"}}
+  {{else}}
+    {{!-- Show all plans --}}
+    {{> member-tiers type="free,paid"}}
+  {{/if}}
+</div>
